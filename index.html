@@ -1,74 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<style>
-	body {
-   background: #444444;
-   color: white;
-   font: 15px/1.51 system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-   margin:0 auto;
-   max-width:600px;
-   padding:20px;
-}
-.item {
-  border:4px solid white;
-  height:120px;
-  width:100%;
-  margin-bottom:50px;
-  background:#333;
-  padding:20px;
-}
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
-
-
-.color-1 { border-color: #9BFFBB}
-.color-2 { border-color: #B9C6FF}
-.color-3 { border-color: #FFA3D8}
-.color-4 { border-color: #FF8E9B}
-</style>
-</head>
-<body>
-
-	<h1>Infinite scrolling throttled</h1>
-<div class="item color-1">Block 1</div>
-<div class="item color-2">Block 2</div>
-<div class="item color-3">Block 3</div>
-<div class="item color-4">Block 4</div>
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.js" ></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
-<script type="text/javascript">
-	
-	// Very simple example.
-// Probably you would want to use a 
-// full-featured plugin like
-// https://github.com/infinite-scroll/infinite-scroll/blob/master/jquery.infinitescroll.js
-$(document).ready(function(){
-  
-  // Check every 200ms the scroll position
-  $(document).on('scroll', _.throttle(function(){
-    check_if_needs_more_content();
-  }, 300));
-
-  function check_if_needs_more_content() {     
-    pixelsFromWindowBottomToBottom = 0 + $(document).height() - $(window).scrollTop() -$(window).height();
-    
-  // console.log($(document).height());
-  // console.log($(window).scrollTop());
-  // console.log($(window).height());
-  //console.log(pixelsFromWindowBottomToBottom);
-    
-    
-    if (pixelsFromWindowBottomToBottom < 200){
-      // Here it would go an ajax request
-      $('body').append($('.item').clone()); 
-      
-    }
-  }
-});
-</script>
-</body>
+    <title>Plain Curves : Under Construction</title>
+  </head>
+  <body>
+   <section class="home">
+   		<div class="content-holder">
+   			<h1><img src="images/logo.png" class="logo" alt="plain curves" /></h1>
+   			<img src="images/text.png" class="text" alt="text" />
+   			<h3>For any important queries, do send mail to us on : <br> <a href="mailto:query@plaincurves.com">query@plaincurves.com</a></h3>
+   			<div class="social">
+   				<img src="images/social.png" alt="text" />
+   			</div>
+   		</div>
+   </section>
+  </body>
 </html>
